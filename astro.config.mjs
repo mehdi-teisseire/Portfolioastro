@@ -1,11 +1,15 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+
 import react from "@astrojs/react";
+
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
+
   vite: {
     resolve: {
       alias: {
@@ -14,15 +18,17 @@ export default defineConfig({
       },
     },
   },
+
   output: "static",
+
   build: {
     inlineStylesheets: "auto",
-    assets: "./", // Ensure relative asset paths for GitHub Pages
   },
+
   server: {
     host: true,
     port: 4321,
   },
-  site: 'https://mehdi-teisseire.github.io',
-  base: '/portfolioastro/',
+
+  adapter: netlify(),
 });
