@@ -69,7 +69,7 @@ const SkillsList = () => {
         <li key={category} className="w-full">
         <div
           onClick={() => toggleItem(category)}
-          className="bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
+          className="bg-[#02223C] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
         >
           <div className="flex items-center gap-3 p-4">
           {CategoryIcons[category]}
